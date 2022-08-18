@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% block body %}
+ <div class="col-sm-6">
+      <h4> Detail page</h4>
+
+    <div class="card mb-3 shadow">
+
+      <div class="card-body">
+
+        <h5 class="card-title">{{data.name}}</h5>
+        <p class="card-text">{{data.priority}}</p>
+          <p class="card-text">{{data.date}}</p>
+          <a href="{% url 'demo:delete' data.id %}" class="btn btn-danger">Delete</a>
+          <a href="{% url 'demo:update' data.id %}" class="btn btn-success">Update</a>
+
+      </div>
+</div>
+    </div><br>
+
+
+{% endblock %}
